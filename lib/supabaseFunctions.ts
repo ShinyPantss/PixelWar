@@ -58,7 +58,8 @@ export const getPostsById = async (userId: string) => {
   const { data, error } = await supabase
     .from("images")
     .select("*")
-    .eq("userId", userId);
+    .eq("userId", userId)
+    .order("created_at", { ascending: false });
 
   return { data, error };
 };

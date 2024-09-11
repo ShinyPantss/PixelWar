@@ -33,11 +33,10 @@ const ProfilePage = () => {
   return (
     <SafeAreaView className="h-full bg-primary   ">
       {isLoggedIn ? (
-        <View className="p-8 ">
+        <View className="p-8  ">
           <TouchableOpacity onPress={onPress} className="w-full justify-end items-end">
             <Image source={icons.logout} className="h-6 w-6 text-white"/>
           </TouchableOpacity>
-
           <Profile />
         </View>
       ) : (
